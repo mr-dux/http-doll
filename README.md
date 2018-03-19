@@ -17,10 +17,11 @@ Let's make a primitive configurationn
   },
   {
     "path": "/mock",
-    "filePath": "mock.json" //path to any file for the test
+    "filePath": "mock.json"
   }
 ]
 ```
+*where "fileParh" - path to any file for the test*
 Then run the server
     
     node http-doll.js
@@ -75,7 +76,7 @@ The configuration can be an array or an object. In the case of an array, it can 
 }
 ```
 #### Configuration fields
-Value                     | Default                                | Description
+Field                     | Default                                | Description
 :-------------------------|:------------------------------------:  | :-----------------------------------
 **port**                  | `8000`                                 | Server port
 **dynamic_mode**          | `true`                                 | If true, the server will re-read the configuration from the file each time it is requested
@@ -83,8 +84,8 @@ Value                     | Default                                | Description
 **log_level**             | ``["log", "info", "warn", "error"]``   | A string or an array of values: log, info, warn, error, trace, debug or none
 **security**              |                                        | Security params
 *security*.**ip**         | -                                      | Array of IPv4 addresses that should be allowed. Requests from "localhost" are not filtered by value ip.
-*security*.**username**   | -                                      | HTTP authorization username        *https://**username**:*password*@host*
-*security*.**password**   | -                                      | HTTP authorization password *https://*username*:**password**@host*
+*security*.**username**   | -                                      | HTTP authorization username        *http://**username**:*password*@host*
+*security*.**password**   | -                                      | HTTP authorization password *http://*username*:**password**@host*
 **response**              |                                        | Description of the response
 *response*.**name**       | -                                      | The name is not necessary, but the information in the logs will be clearer
 *response*.**method**     | -                                      | HTTP method ("GET", "POST" ...) if the field is not specified, the request will be processed with any method
