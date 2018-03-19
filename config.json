@@ -1,0 +1,34 @@
+{
+  "port": 8000,
+
+  "dynamic_mode": true,
+
+  "log_time": true,
+  "log_level": ["log", "info", "warn", "error"],
+
+  "security": {
+    "ip": ["10.1.121.10"],
+    "username": "user",
+    "password": "1234"
+  },
+
+  "response": [
+    {
+      "name": "test_response",
+      "method": "GET",
+      "path": "/example?id=55",
+      "params": {
+        "id": 5,
+        "name": "mock"
+      },
+      "filePath": "config.json",
+      "string": "default string",
+      "code": 200,
+      "delay": 2000,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Keep-Alive": "timeout=120"
+      }
+    }
+  ]
+}
